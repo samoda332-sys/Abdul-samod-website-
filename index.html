@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Abdul's Portfolio</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: #222;
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        h1 {
+            color: gold;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        .clock {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Abdul Samod</h1>
+
+    <h3>Future Software Engineer</h3>
+
+    <p>
+        I am learning HTML, CSS and JavaScript.
+        This website was built by me.
+    </p>
+
+    <div class="clock" id="clock"></div>
+
+    <h2>Calculator</h2>
+
+    <input type="number" id="num1" placeholder="First Number">
+    <input type="number" id="num2" placeholder="Second Number">
+
+    <br>
+
+    <button onclick="add()">Add</button>
+
+    <p id="answer"></p>
+
+    <h2>Interactive Button</h2>
+
+    <button onclick="message()">
+        Click Me
+    </button>
+
+    <p id="msg"></p>
+
+</div>
+
+<script>
+
+function add() {
+    let a = Number(document.getElementById("num1").value);
+    let b = Number(document.getElementById("num2").value);
+
+    document.getElementById("answer").innerHTML =
+        "Answer: " + (a + b);
+}
+
+function message() {
+    document.getElementById("msg").innerHTML =
+        "Thanks for checking out my coding project!";
+}
+
+function updateClock() {
+    let now = new Date();
+
+    document.getElementById("clock").innerHTML =
+        now.toLocaleTimeString();
+}
+
+setInterval(updateClock, 1000);
+
+</script>
+
+</body>
+</html>        
+        
